@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   root 'tales#index'
 
-  resources :tales
+  resources :tales do
+  	resources :what_ifs
+  end
 
 
 end
