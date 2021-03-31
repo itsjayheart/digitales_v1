@@ -1,0 +1,10 @@
+<h1>create</h1>
+
+
+<%= form_for @tale, url: {action: "create"} do |f| %>
+	<%= label_tag(:title, "title") %><br />
+	<%= f.text_field :title %><br />
+	<%= label_tag(:description, "first statement") %><br />
+	<%= f.text_field :description %><br />
+	<%= f.submit "create" %>
+<% end %>

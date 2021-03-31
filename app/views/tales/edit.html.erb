@@ -1,0 +1,9 @@
+<h1>edit</h1>
+
+<%= form_for @tale, url: {action: "update"} do |f| %>
+	<%= label_tag(:title, "title") %><br />
+	<%= f.text_field :title, placeholder: @tale.title %><br />
+	<%= label_tag(:description, "description") %><br />
+	<%= f.text_field :description, size: "60x12", placeholder: @tale.description %><br />
+	<%= f.submit "edit" %>
+<% end %>

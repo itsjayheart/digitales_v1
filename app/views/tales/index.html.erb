@@ -1,0 +1,12 @@
+<h1>tales</h1>
+
+<% current_creatrix.tales.each do |tale|%>
+	<p><%= tale.title %></p>
+	<p><%= tale.description %></p>
+	<p><%= link_to 'edit', edit_tale_path(tale.id) %></p><br />
+<% end %>
+
+<p><%= link_to 'create a new tale', new_tale_path %></p>
+
+
+
