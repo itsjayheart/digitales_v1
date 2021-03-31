@@ -1,0 +1,16 @@
+<h1><%= @tale.title %>'s 'What if... ?' propositions</h1>
+
+<% @what_ifs.each do |what_if| %>
+	<p>what if - <%= what_if.title %></p>
+	<p><%= link_to 'edit', edit_tale_what_if_path(@tale.id, what_if.id) %></p><br />
+<% end %>
+
+<% if @tale.what_ifs.count < 3 %>
+	<br />
+
+	<p><%= link_to "add a new 'What if... ?' proposition", new_tale_what_if_path(@tale.id) %></p>
+<% end %> 
+
+<br />
+
+<p><%= link_to 'back', tales_path %></p>
