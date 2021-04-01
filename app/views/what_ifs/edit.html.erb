@@ -1,0 +1,9 @@
+<h1>edit 'What if... ?' proposition</h1>
+
+<%= form_for @what_if, url: {action: "update"} do |f| %>
+	<%= label_tag(:title, "title") %><br />
+	<%= f.text_field :title, placeholder: @what_if.title %><br />
+	<%= label_tag(:description, "description") %><br />
+	<%= f.text_field :description, size: "60x12", placeholder: @what_if.description %><br />
+	<%= f.submit "edit" %>
+<% end %>
