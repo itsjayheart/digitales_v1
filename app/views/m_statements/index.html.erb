@@ -1,0 +1,17 @@
+<h1><%= @tale.title %>'s m core m_statements</h1>
+
+<% @m_statements.each do |m_statement| %>
+	<p>might or might not - <%= m_statement.title + ' ||| ' + m_statement.description %></p>
+	<p><%= link_to 'edit', edit_tale_m_statement_path(@tale.id, m_statement.id) %></p><br />
+	<p>see settings</p><br /><br /><hr />
+<% end %>
+
+<% if @tale.m_statements.count < 7 %>
+	<br />
+
+	<p><%= link_to "add a new m statement", new_tale_m_statement_path(@tale.id) %></p>
+<% end %> 
+
+<br />
+
+<p><%= link_to 'back', tale_what_ifs_path(@tale.id) %></p>

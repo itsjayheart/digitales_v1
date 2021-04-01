@@ -1,0 +1,10 @@
+<h1>create a new core m statement</h1>
+
+
+<%= form_for @m_statement, url: {action: "create"} do |f| %>
+	<%= label_tag(:title, "title") %><br />
+	<%= f.text_field :title %><br />
+	<%= label_tag(:description, "description") %><br />
+	<%= f.text_field :description %><br />
+	<%= f.submit "create" %>
+<% end %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :tales do
   	resources :what_ifs
+  	resources :m_statements
   end
 
 

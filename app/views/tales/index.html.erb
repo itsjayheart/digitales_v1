@@ -4,7 +4,13 @@
 	<p>title : <%= tale.title %></p>
 	<p>first statement : <%= tale.description %></p>
 	<p><%= link_to 'edit', edit_tale_path(tale.id) %></p><br /><br />
-	<p><%= link_to 'see what ifs', tale_what_ifs_path(tale.id)%></p><br />
+	<p>
+		<%= link_to 'see what ifs', tale_what_ifs_path(tale.id)%><br />
+		<%= link_to 'see m_statements', tale_m_statements_path(tale.id) %><br />
+		see settings<br />
+		see chron storylines<br />
+		see achron storylines of storytelling digits
+	</p><br />
 	<hr />
 <% end %>
 
